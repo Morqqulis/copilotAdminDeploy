@@ -1,6 +1,5 @@
-import { Location, Station, Voice, Client } from '@/types'
 
-export const mockLocations: Location[] = [
+export const mockLocations = [
   {
     id: 1,
     name: 'New York',
@@ -17,13 +16,14 @@ export const mockLocations: Location[] = [
   },
 ]
 
-export const mockStations: Station[] = [
+export const mockStations = [
   {
     id: '1',
     stationId: 'sh5622d9',
     name: 'Radio NYC',
     locationId: 1,
     omniplayerUrl: 'https://nyc.omniplayer.com',
+
     clientId: 'nyc_client',
     clientSecret: 'nyc_secret',
     username: 'nyc_user',
@@ -54,9 +54,10 @@ export const mockStations: Station[] = [
   },
 ]
 
-export const mockVoices: Voice[] = [
+export const mockVoices = [
   {
     id: '1',
+
     voiceId: 'pQB83Phx1CmQQkTQxu6o',
     name: 'John Smith',
     gender: 'male',
@@ -81,9 +82,10 @@ export const mockVoices: Voice[] = [
   },
 ]
 
-export const mockClients: Client[] = [
+export const mockClients = [
   {
     id: 1,
+
     name: 'John Media Group',
     email: 'contact@johnmedia.com',
     company: 'John Media Holdings',
