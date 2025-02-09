@@ -1,10 +1,13 @@
-export const mockClients = [
+import { Client } from './types'
+
+export const mockClients: Client[] = [
 	{
 		id: 1,
 		name: 'John Doe',
 		email: 'john@radioone.com',
 		company: 'Radio One',
 		website: 'https://radioone.com',
+
 		logo: '/logos/radio-one.png',
 		stationIds: [1, 2],
 		status: 'active' as const,
