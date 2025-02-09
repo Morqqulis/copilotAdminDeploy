@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    
+    /* Darker card background */
+    --card: 240 12% 6%;
+    --card-foreground: 0 0% 98%;
+    
+    /* Darker popover */
+    --popover: 240 12% 6%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* Red primary color */
+    --primary: 0 72% 32%;  /* red-800 */
+    --primary-foreground: 0 0% 98%;
+    
+    /* Darker secondary */
+    --secondary: 240 8% 12%;
+    --secondary-foreground: 0 0% 98%;
+    
+    /* Darker muted */
+    --muted: 240 8% 12%;
+    --muted-foreground: 240 5% 64.9%;
+    
+    /* Red accent */
+    --accent: 0 72% 32%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Darker borders */
+    --border: 240 8% 12%;
+    --input: 240 8% 12%;
+    --ring: 240 4.9% 83.9%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Modern Table Styles */
+.table-container {
+  @apply relative overflow-x-auto rounded-xl border border-border bg-card;
+}
+
+.modern-table {
+  @apply w-full text-sm text-left;
+}
+
+.modern-table thead {
+  @apply bg-secondary text-secondary-foreground;
+}
+
+.modern-table th {
+  @apply px-6 py-4 font-medium rounded-t-lg;
+}
+
+.modern-table tbody tr {
+  @apply border-b border-border hover:bg-muted/50 transition-colors;
+}
+
+.modern-table td {
+  @apply px-6 py-4;
+}
+
+/* Modern Card Styles */
+.stats-card {
+  @apply rounded-xl border border-border bg-card p-6 shadow-sm;
+}
+
+/* Modern Button Styles */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-primary px-4 py-2 text-sm font-medium text-primary-foreground 
+    hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 
+    disabled:pointer-events-none disabled:opacity-50 transition-colors;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-xl bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground 
+    hover:bg-secondary/80 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 
+    disabled:pointer-events-none disabled:opacity-50 transition-colors;
+}
+
+/* Modern Input Styles */
+.input-modern {
+  @apply flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm 
+    placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 
+    focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+/* Status Badge Styles */
+.status-badge {
+  @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+}
+
+.status-badge-active {
+  @apply bg-green-500/20 text-green-400;
+}
+
+.status-badge-inactive {
+  @apply bg-red-500/20 text-red-400;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  @apply w-64 bg-card border-r border-border;
+}
+
+.sidebar-link {
+  @apply flex items-center gap-x-3 px-4 py-3 text-sm font-medium rounded-xl mb-1 
+    transition-colors duration-200;
+}
+
+.sidebar-link-active {
+  @apply bg-primary text-primary-foreground;
+}
+
+.sidebar-link-inactive {
+  @apply text-muted-foreground hover:bg-secondary/50;
+} 

@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1738712994703,
+      "tag": "0000_salty_gravity",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1738713522655,
+      "tag": "0001_fuzzy_purple_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1738959483887,
+      "tag": "0002_military_the_liberteens",
+      "breakpoints": true
+    }
+  ]
+}
